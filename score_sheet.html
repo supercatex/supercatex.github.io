@@ -1,18 +1,64 @@
-<h1>Hello World!</h1>
-<div id="example-table"></div>
 
-<link href="dist/css/tabulator.min.css" rel="stylesheet">
-<script type="text/javascript" src="dist/js/tabulator.min.js"></script>
-<script>
-var table = new Tabulator("#example-table", {
-    height:"311px",
-    columns:[
-    {title:"Name", field:"name"},
-    {title:"Progress", field:"progress", sorter:"number"},
-    {title:"Gender", field:"gender"},
-    {title:"Rating", field:"rating"},
-    {title:"Favourite Color", field:"col"},
-    {title:"Date Of Birth", field:"dob", hozAlign:"center"},
-    ],
-});
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W2UI Demo: grid/27</title>
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css">
+</head>
+<body>
+
+<div id="grid" style="max-width: 100%; height: 600px;"></div>
+<br>
+<div style="float: left">
+    <label style="position: relative; top: 3px; left: 10px">
+        <input type="checkbox" id="singleOrMulti" checked style="position: relative; top: 1px; left: -2px;" onclick="multi(this)">
+        Advanced Search
+    </label>
+</div>
+<script type="module">
+import { w2grid } from 'https://rawgit.com/vitmalina/w2ui/master/dist/w2ui.es6.min.js'
+
+let grid = new w2grid({
+    name: 'grid',
+    box: '#grid',
+	header: 'Main',
+    show: {
+		header: true,
+        lineNumbers: false,
+        toolbar: true,
+        footer: true
+    },
+    multiSearch: true,
+	searches: [
+		{ field: 'ID', label: 'ID', type: 'text' },
+		{ field: 'name', label: 'Name', type: 'text' },
+		{ field: 'lastest', label: 'Ranking', type: 'int' }
+	],
+columns: [
+	{ field: 'recid', text: '#', size: '50px', frozen: true, sortable: true },
+	{ field: 'ID', text: 'ID', size: '150px', frozen: true, sortable: true },
+	{ field: 'lastest', text: '最新', size: '200px', sortable: true },
+	{ field: '200108', text: '200108', size: '200px', sortable: true },
+	{ field: '199197', text: '199197', size: '200px', sortable: true }
+],records: [
+	{ "recid": 1, "ID": "Vollerei1145", "lastest": 1001, "200108": 1001, "199197": 828, "w2ui": { "style": "background-color: #FFEE55" } },
+	{ "recid": 2, "ID": "tler123", "lastest": 942, "200108": 0, "199197": 942, "w2ui": { "style": "background-color: #AAAAAA" } },
+	{ "recid": 3, "ID": "AdrianChe", "lastest": 885, "200108": 0, "199197": 885, "w2ui": { "style": "background-color: #B87838" } },
+	{ "recid": 4, "ID": "NathanVong123", "lastest": 772, "200108": 772, "199197": 942, "w2ui": { "style": "background-color: #B87838" } },
+	{ "recid": 5, "ID": "MK14roger", "lastest": 771, "200108": 0, "199197": 771 },
+	{ "recid": 6, "ID": "MakCH", "lastest": 727, "200108": 727, "199197": 0 },
+	{ "recid": 7, "ID": "Wisley_PCMS", "lastest": 714, "200108": 0, "199197": 714 },
+	{ "recid": 8, "ID": "Turtle_is_busy", "lastest": 657, "200108": 0, "199197": 657 },
+	{ "recid": 9, "ID": "hcng", "lastest": 525, "200108": 525, "199197": 600 }
+]
+})
+
+window.multi = function(el) {
+    grid.multiSearch = el.checked
+    grid.searchReset()
+    grid.refresh()
+}
 </script>
+
+</body>
+</html>
