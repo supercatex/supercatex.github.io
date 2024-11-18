@@ -104,7 +104,7 @@ a { font-size: 12px; }
     height: 250px;
     background: url(./images/feature2.jpg) no-repeat center;
     background-size: 100%;
-    background-position: center -330px;
+    background-position: center -295px;
 }
 .participation-images h1 { font-size: 24px; top: auto; bottom: 10px; }
 
@@ -207,4 +207,5 @@ a { font-size: 12px; }
 }
 .participation_list img {
     height: 150px;
+    margin-bottom: 3px;
 }
