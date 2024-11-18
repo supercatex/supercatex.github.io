@@ -116,6 +116,15 @@ a { font-size: 12px; }
 }
 .video-images h1 { font-size: 24px; top: auto; bottom: 10px; }
 
+.demo-images {
+    height: 250px;
+    background: url(./images/feature.jpg) no-repeat center;
+    background-size: 100%;
+    background-position: center -280px;
+}
+.demo-images h1 { font-size: 24px; top: auto; bottom: 10px; }
+
+
 .navbar {
 	--bs-navbar-padding-y: 0;
 	background: linear-gradient(to bottom, #e81a22, #940d13);
