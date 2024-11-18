@@ -14,9 +14,30 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
         <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="../style.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+$(function() {
+    $('.pop').on('click', function() {
+        $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+        $('#imagemodal').modal('show');
+        return false;
+    });
+});
+        </script>
     </head>
 
     <body>
+<div class="modal fade modal-xl" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" data-dismiss="modal">
+    <div class="modal-content">
+      <div class="modal-body">
+          <img src="" class="imagepreview" style="width: 100%;" >
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
         <main>
             <div class="container py-4">
                 <header class="pb-3 border-bottom">
@@ -44,7 +65,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="./pages/Participation_and_Achievements.html">Participation and Achievements</a>
+                                    <a class="nav-link" aria-current="page" href="./Participation_and_Achievements.html">Participation and Achievements</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="#">Videos</a>
@@ -57,7 +78,7 @@
                     </div>
                 </nav>
 
-                <div class="p-5 mb-4 bg-body-tertiary feature-images">
+                <div class="p-5 mb-4 bg-body-tertiary feature-images participation-images">
                     <div class="container-fluid py-5">
                         <h1 class="display-5 fw-bold">RoboCup@Home Playground 2024</h1>
                         <p class="col-md-8 fs-4"></p>
@@ -77,9 +98,9 @@
                 </ol>
             </div>
             <div class="col-md-8">
-                <img src="../images/RoboCup2024_0.jpg" />
-                <img src="../images/RoboCup2024_1.jpg" />
-                <img src="../images/RoboCup2024_2.jpg" />
+                <a href="#" class="pop"><img src="../images/RoboCup2024_0.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/RoboCup2024_1.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/RoboCup2024_2.jpg" /></a>
             </div>
         </div>
     </li>
@@ -94,8 +115,8 @@
                 </ol>
             </div>
             <div class="col-md-8">
-                <img src="../images/JapanOpen2024_0.jpg" />
-                <img src="../images/JapanOpen2024_1.jpg" />
+                <a href="#" class="pop"><img src="../images/JapanOpen2024_0.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/JapanOpen2024_1.jpg" /></a>
             </div>
         </div>
     </li>
@@ -109,8 +130,8 @@
                 </ol>
             </div>
             <div class="col-md-8">
-                <img src="../images/RoboCup2023_0.jpg" />
-                <img src="../images/RoboCup2023_1.jpg" />
+                <a href="#" class="pop"><img src="../images/RoboCup2023_0.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/RoboCup2023_1.jpg" /></a>
             </div>
         </div>
     </li>
@@ -124,9 +145,9 @@
                 </ol>
             </div>
             <div class="col-md-8">
-                <img src="../images/JapanOpen2023_0.jpg" />
-                <img src="../images/JapanOpen2023_1.jpg" />
-                <img src="../images/JapanOpen2023_2.jpg" />
+                <a href="#" class="pop"><img src="../images/JapanOpen2023_0.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/JapanOpen2023_1.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/JapanOpen2023_2.jpg" /></a>
             </div>
         </div>
     </li>
@@ -138,7 +159,7 @@
                 <div><a target="_blank" href="https://yauaward-asia.hk/2023-asia-final-results#fbaeaeaf-ebe1-419e-b51b-fe672254a35d">https://yauaward-asia.hk/2023-asia-final-results#fbaeaeaf-ebe1-419e-b51b-fe672254a35d</a></div>
             </div>
             <div class="col-md-8">
-                <img src="../images/Yauaward2023.jpg" />
+                <a href="#" class="pop"><img src="../images/Yauaward2023.jpg" /></a>
             </div>
         </div>
     </li>
@@ -153,9 +174,9 @@
                 </ol>
             </div>
             <div class="col-md-8">
-                <img src="../images/FaithBot.jpg" />
-                <img src="../images/FAMBOT2022.jpg" />
-                <img src="../images/TryForever2022.jpg" />
+                <a href="#" class="pop"><img src="../images/FaithBot.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/FAMBOT2022.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/TryForever2022.jpg" /></a>
             </div>
         </div>
     </li>
@@ -170,8 +191,8 @@
                 <div><a target="_blank" href="https://yauaward-asia.hk/2019-22-asia-results#98587576-9218-4eae-a84a-a092c665d2d9">https://yauaward-asia.hk/2019-22-asia-results#98587576-9218-4eae-a84a-a092c665d2d9</a></div>
             </div>
             <div class="col-md-8">
-                <img src="../images/Yauaward2021.jpg" />
-                <img src="../images/robot_2.jpg" />
+                <a href="#" class="pop"><img src="../images/Yauaward2021.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/robot_2.jpg" /></a>
             </div>
         </div>
     </li>
@@ -224,9 +245,9 @@
                 </ol>
             </div>
             <div class="col-md-8">
-                <img src="../images/TheGreyArea2021.jpg" />
-                <img src="../images/FaithBot.jpg" />
-                <img src="../images/TryForever2021.jpg" />
+                <a href="#" class="pop"><img src="../images/TheGreyArea2021.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/FaithBot.jpg" /></a>
+                <a href="#" class="pop"><img src="../images/TryForever2021.jpg" /></a>
             </div>
         </div>
     </li>
@@ -239,7 +260,7 @@
                 <div>-- Share -- <a target="_blank" href="https://youtu.be/vla2lKh6Mms">https://youtu.be/vla2lKh6Mms</a></div>
             </div>
             <div class="col-md-8">
-                <img src="../images/TheGreyArea2020.jpg" />
+                <a href="#" class="pop"><img src="../images/TheGreyArea2020.jpg" /></a>
             </div>
         </div>
     </li>
@@ -249,7 +270,7 @@
             <div class="col-md-4">
             </div>
             <div class="col-md-8">
-                <img src="../images/TheJourneyOfDeepThinking2019.jpg" />
+                <a href="#" class="pop"><img src="../images/TheJourneyOfDeepThinking2019.jpg" /></a>
             </div>
         </div>
     </li>

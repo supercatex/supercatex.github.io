@@ -80,6 +80,8 @@ header a span {
     margin-right: auto;
 }
 
+a { font-size: 12px; }
+
 .feature-images {
     height: 500px;
     background: url(./images/feature4.jpg) no-repeat center;
@@ -97,6 +99,14 @@ header a span {
     padding: 10px;
     text-shadow: 1px 1px 2px black;
 }
+
+.participation-images {
+    height: 250px;
+    background: url(./images/feature2.jpg) no-repeat center;
+    background-size: 100%;
+    background-position: center -330px;
+}
+.participation-images h1 { font-size: 24px; top: auto; bottom: 10px; }
 
 .navbar {
 	--bs-navbar-padding-y: 0;
