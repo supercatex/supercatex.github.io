@@ -102,11 +102,19 @@ a { font-size: 12px; }
 
 .participation-images {
     height: 250px;
-    background: url(./images/feature2.jpg) no-repeat center;
+    background: url(./images/feature3.jpg) no-repeat center;
     background-size: 100%;
-    background-position: center -295px;
+    background-position: center -180px;
 }
 .participation-images h1 { font-size: 24px; top: auto; bottom: 10px; }
+
+.video-images {
+    height: 250px;
+    background: url(./images/feature2.jpg) no-repeat center;
+    background-size: 100%;
+    background-position: center -280px;
+}
+.video-images h1 { font-size: 24px; top: auto; bottom: 10px; }
 
 .navbar {
 	--bs-navbar-padding-y: 0;
@@ -208,4 +216,13 @@ a { font-size: 12px; }
 .participation_list img {
     height: 150px;
     margin-bottom: 3px;
+}
+
+.video_page h2 {
+    font-weight: bold;
+    margin-top: 50px;
+}
+.video_page h3 {
+    font-weight: bold;
+    margin-top: 50px;
 }
