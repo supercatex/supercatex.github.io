@@ -110,20 +110,27 @@ a { font-size: 12px; }
 
 .video-images {
     height: 250px;
-    background: url(./images/feature2.jpg) no-repeat center;
+    background: url(./images/demo_image.jpg) no-repeat center;
     background-size: 100%;
-    background-position: center -280px;
+    background-position: center -350px;
 }
 .video-images h1 { font-size: 24px; top: auto; bottom: 10px; }
 
 .demo-images {
     height: 250px;
-    background: url(./images/feature.jpg) no-repeat center;
+    background: url(./images/demo_image4.jpg) no-repeat center;
     background-size: 100%;
-    background-position: center -280px;
+    background-position: center -300px;
 }
 .demo-images h1 { font-size: 24px; top: auto; bottom: 10px; }
 
+.contact-images {
+    height: 250px;
+    background: url(./images/competition_image.jpg) no-repeat center;
+    background-size: 100%;
+    background-position: center -450px;
+}
+.contact-images h1 { font-size: 24px; top: auto; bottom: 10px; }
 
 .navbar {
 	--bs-navbar-padding-y: 0;
