@@ -86,7 +86,7 @@ a { font-size: 12px; }
     height: 400px;
     background: url(./images/feature4.jpg) no-repeat center;
     background-size: 100%;
-    background-position: center -280px;
+    background-position: center center;
     padding: 0;
     position: relative;
     border-radius: 0 0 10px 10px;
